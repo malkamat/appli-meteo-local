@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "cabin";
+
+}
+
+.grille {
+    position: relative;
+    display: grid;
+    grid-template: repeat(6, 120px) / 500px;
+    background: linear-gradient(rgb(6,6,122), rgb(101, 7, 145));
+}
