@@ -55,3 +55,19 @@ body {
     justify-self: center;
     align-self: center;
 }
+
+.prevision {
+    grid-area: 6/1/7/2;
+    display: grid;
+    grid-template: 100%/ repeat(6,71px) 74px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.jours {
+    display: grid;
+    grid-template: repeat(3,33%) / 100%;
+}
+
+.iconePrevision {
+    grid-area: 1/1/3/2;
+}
