@@ -1,6 +1,7 @@
 const localisation = document.querySelector(".localisation")
 const temperature = document.querySelector(".temperature")
 const description = document.querySelector(".description")
+const canvas = document.querySelector("#icone")
 
 window.addEventListener("load", () => {
   if (navigator.geolocation) {
@@ -16,8 +17,9 @@ window.addEventListener("load", () => {
           let data = await response.json()
           console.log(data)
          localisation.textContent = data.timezone
-         temperature.textContent =  `${Math.floor(data.current.temp)} °`
-        
+         temperature.textContent =  `${Math.trunc(data.current.temp)} °`
+         description.textContent = data.current.weather[0].main
+         canvas.innerHTML = `<img src=" http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png">`
 
         } else {
           console.log(response.status)
